@@ -2,15 +2,15 @@
 int main()
 {
     int a[100];
-    int n, Max = 0, max = 0;//分别定义两和
+    int n, Max = 0, max = 0;//Define two and
     int c1 = 0, c2 = 0;
-    int cc1 = 0, cc2 = 0;//记录两组和的起末位置
-    scanf("%d", &n);//输入数组长度
+    int cc1 = 0, cc2 = 0;//Record the starting and ending positions of two groups and
+    scanf("%d", &n);//Input array length
     int i;
-    for (i = 0; i < n; i++)//循环输入数组并进行判断
+    for (i = 0; i < n; i++)//Loop in the array and determine
     {
         scanf("%d", &a[i]);
-        if (i == 0)//初始化两组最大和
+        if (i == 0)//Initializes the maximum sum of two sets
         {
             Max = max = a[i];
             continue;
@@ -25,12 +25,12 @@ int main()
             max = a[i];
             cc1 = cc2 = i;
         }
-        if (max >= Max)//判断是否取代
+        if (max >= Max)//To determine whether or not to replace
         {
             Max = max;
             c1 = cc1, c2 = cc2;
         }
     }
-    printf("%d %d\nMax=%d\n", c1, c2, Max);//输出位置及和
+    printf("%d %d\nMax=%d\n", c1, c2, Max);//Output location and
     return 0;
 }
